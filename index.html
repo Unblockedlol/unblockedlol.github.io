@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: #A9A9A9;
 }
+
+/* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
   float: left;
@@ -19,29 +24,70 @@
   font-size: 17px;
 }
 
-#grad1 {
-  height: 720px;
-  width: 1340px;
-  background-color: red; 
-  background-image: linear-gradient(to bottom right, grey, black);
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #6082B6;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
 </style>
 </head>
 <body>
-<div id="grad1" style="text-align:center;margin:auto;color:#FFFFFF;font-size:40px;font-weight:bold">
-Skid.rip -🤍- Main Website
-<p><a style="text-align:center;margin:auto;color:#FFFFFF;font-size:40px;font-weight:bold" href="https://steamcookieclicker.github.io/">Cookie clicker   |</a>
-<a style="text-align:center;margin:auto;color:#FFFFFF;font-size:40px;font-weight:bold" href="https://unicyclehero.github.io/">Game Website 1   |</a>
-<a style="text-align:center;margin:auto;color:#FFFFFF;font-size:40px;font-weight:bold" href="https://io-games-2025.github.io/">Game Website 2|</a>
-<a style="text-align:center;margin:auto;color:#FFFFFF;font-size:40px;font-weight:bold" href="https://retrobowl2.blog/">Game Website 3   |</a>
-<a style="text-align:center;margin:auto;color:#FFFFFF;font-size:40px;font-weight:bold" href="https://www.symbaloo.com/mix/agariounblockedschool?lang=EN
-">Game Website 4   |</a>
-<a style="text-align:center;margin:auto;color:#FFFFFF;font-size:40px;font-weight:bold" href="https://io-games-2025.github.io">Game Website 5   |</a>
-<a style="text-align:center;margin:auto;color:#FFFFFF;font-size:40px;font-weight:bold" href="https://sd592g.github.io/zj684od4lfg/">Minecraft/Eaglercraft   |</a>
-<a style="text-align:center;margin:auto;color:#FFFFFF;font-size:40px;font-weight:bold" href="https://eaglercraft-unblocked.neocities.org/188/">Minecraft Multiplayer|</a>
+
+<h2>Skid.rip</h2>
+<p>Main Website</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Games')">Games</button>
+  <button class="tablinks" onclick="openCity(event, 'Websites')">Websites</button>
+  <button class="tablinks" onclick="openCity(event, 'Assignments')">Assignments</button>
 </div>
 
-  
+<div id="Games" class="tabcontent">
+  <h3>Copy and Paste link for game</h3>
+  <p/> https://sd592g.github.io/zj684od4lfg/ - eaglercraft<p/>
+  <p/> https://eaglercraft-unblocked.neocities.org/188/ - MC multiplayer<p/>
+  <p/> https://steamcookieclicker.github.io/ <p/>
+</div>
 
+<div id="Websites" class="tabcontent">
+  <h3>Websites</h3>
+  <p> https://io-games-2025.github.io/ - Main Site</p> 
+</div>
+
+<div id="Assignments" class="tabcontent">
+  <h3>Assignments</h3>
+  <p> Math - Yes</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
 </body>
-</html>
+</html> 
+
+
