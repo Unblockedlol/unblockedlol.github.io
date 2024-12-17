@@ -1,1 +1,1 @@
-<h/> Skid.rip <h>
+<h/> Skid.rip - ⭐ <h>
