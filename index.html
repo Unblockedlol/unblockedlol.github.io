@@ -1,52 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial;}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Body Styles with Custom Background Animation */
+    body {
+      font-family: Arial;
+      background-image: url('https://media.giphy.com/media/aRZ4vTsHnyW6A/giphy.gif?cid=790b7611io7uzat5ytbmiv51bcjwvusjnrp6z6igwvoctylp&ep=v1_gifs_search&rid=giphy.gif&ct=g'); /* Replace with your custom image URL */
+      background-color: #f0f0f0; /* Fallback color */
+      background-size: cover; /* Ensures the image covers the entire background */
+      background-position: center; /* Centers the image */
+      background-repeat: no-repeat; /* Ensures the image does not repeat */
+      margin: 0;
+      padding: 0;
+      height: 100vh; /* Ensures the body takes full viewport height */
+      animation: animateBackground 20s linear infinite; /* Apply the animation */
+    }
 
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #A9A9A9;
-}
+    /* Keyframes for animated background */
+    @keyframes animateBackground {
+      0% {
+        background-position: 0 0; /* Start at the top-left corner */
+      }
+      50% {
+        background-position: 100% 0; /* Move to the right edge */
+      }
+      100% {
+        background-position: 0 0; /* Return to the top-left corner */
+      }
+    }
 
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: top-right;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #5A5A5A;
+    }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #6082B6;
-}
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #6082B6;
+    }
 
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-</style>
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+      background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for better contrast with the background */
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
 
-<h2>Skid.rip</h2>
-<p>Main Website</p>
+<h2 style="color: White">Skid.solutions</h2>
+<p style="color: White">Main Website</p>
 
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'Games')">Games</button>
@@ -57,9 +83,9 @@ body {font-family: Arial;}
 
 <div id="Games" class="tabcontent">
   <h3>Copy and Paste link for game</h3>
-  <p/> https://sd592g.github.io/zj684od4lfg/ - eaglercraft<p/>
-  <p/> https://eaglercraft-unblocked.neocities.org/188/ - MC multiplayer<p/>
-  <p/> https://steamcookieclicker.github.io/ <p/>
+  <p> https://sd592g.github.io/zj684od4lfg/ - eaglercraft </p>
+  <p> https://eaglercraft-unblocked.neocities.org/188/ - MC multiplayer </p>
+  <p> https://steamcookieclicker.github.io/ </p>
   <p> https://www.google.com/logos/2019/july4th19/r6/july4th19.html?hl=en - baseball </p>
 </div>
 
@@ -67,38 +93,36 @@ body {font-family: Arial;}
   <h3>Websites</h3>
   <p> https://io-games-2025.github.io/ - Main Site </p> 
   <p> https://object-lesson.github.io/ - Website 2 </p>
-  <p>  </p>
 </div>
 
 <div id="Assignments" class="tabcontent">
   <h3>Assignments</h3>
-  <p> Math - No
-  <p> Science - no
-  <p> ELA - never </p>
-  <p> Social Studies - no </p>
+  <p> Math - No </p>
+  <p> Science - No </p>
+  <p> ELA - Never </p>
+  <p> Social Studies - No </p>
 </div>
 
-<div id="Misc" class="tabcontent">  
+<div id="Misc" class="tabcontent">
   <h3>Misc</h3>
   <p> Stop getting the websites banned retards </p>
-  
+</div>
+
 <script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
 </script>
 
 </body>
-</html> 
-
-
+</html>
