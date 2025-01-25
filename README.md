@@ -1,3 +1,3 @@
-<h/> Skid.rip - ⭐ <h>
-<p> Game Websites </p>
-<p> Multiple Games </p>
+<h/> Skid.Solutions - ⭐ <h>
+<p> Accounts </p>
+<p> View Method </p>
